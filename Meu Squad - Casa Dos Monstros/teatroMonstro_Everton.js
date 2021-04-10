@@ -1,6 +1,8 @@
 // Teatro do monstro
 
-// O teatro do monstro permite a entrada de até 5 pessoas, a peça só começa após atingir a lotação máxima, nesta peça é proibida a entrada de menores de 16 anos e o gerente quer saber quantos são homens e quantos são mulheres antes da peça começar.
+// O teatro do monstro permite a entrada de até 5 pessoas, a peça só começa após atingir a lotação máxima,
+// nesta peça é proibida a entrada de menores de 16 anos 
+//e o gerente quer saber quantos são homens e quantos são mulheres antes da peça começar.
 
 const prompt = require("prompt-sync")();
 

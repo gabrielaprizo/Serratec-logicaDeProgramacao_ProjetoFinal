@@ -28,3 +28,9 @@ if (escolha == 1){
 else {
     console.log("Que Pena! :( A sua arma não foi capaz de derrotar o Dragão");
 }
+console.log("Conheça o Dragão!")
+console.log("─────▄████▀█▄");
+console.log("───▄█████████████████▄");
+console.log("─▄█████.▼.▼.▼.▼.▼.▼▼▼▼");
+console.log("▄███████▄.▲.▲▲▲▲▲▲▲▲");
+console.log("████████████████████▀▀");

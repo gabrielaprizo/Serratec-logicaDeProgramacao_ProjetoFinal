@@ -7,8 +7,13 @@
 
 const ler = require("prompt-sync")();
 
-var diaHoje = (new Date().getDay());
+const diaHoje = (new Date().getDay());
 var finalCPF = ler("Digite o ultimo digito do seu cpf: ");
+
+if (!Number.isInteger(finalCPF)) {
+    console.log('Apenas números podem ser usados');
+    return;
+}
 
 var autorizado = (diaHoje % 2) == (finalCPF % 2);
 

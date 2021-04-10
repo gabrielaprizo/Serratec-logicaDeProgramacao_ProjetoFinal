@@ -5,16 +5,34 @@
 // CPF (apos o hífen)
 // Autorizado a entrar na loja: false
 
+//Colocando estilo no terminal
+var corVermelha = (texto) => {
+    return '\x1b[31m' + texto + '\x1b[0m';
+};
+
+var corAzul = (texto) => {
+    return '\x1b[34m' + texto + '\x1b[0m';
+}
+
+var corVerde = (texto) => {
+    return '\x1b[32m' + texto + '\x1b[0m';
+};
+
+var negrito = (texto) => {
+    return '\x1b[1m' + texto + '\x1b[0m';
+};
+
+
 const ler = require("prompt-sync")();
 
 const diaHoje = (new Date().getDay());
-var finalCPF = ler("Digite o ultimo digito do seu cpf: ");
+var finalCPF = parseInt(ler("Digite o ultimo digito do seu cpf: "));
 
-if (!Number.isInteger(finalCPF)) {
-    console.log('Apenas números podem ser usados');
-    return;
+if (isNaN(finalCPF)) {
+    console.log(corVermelha(negrito('\nApenas números podem ser usados\n')));
+    return
 }
 
 var autorizado = (diaHoje % 2) == (finalCPF % 2);
 
-console.log("Autorizado a entrar na loja? " + (autorizado ? "Sim" : "Não"));
+console.log(negrito("\t\nAutorizado a entrar na loja? " + (corVerde(autorizado ? "Sim" : "Não\n"))));
